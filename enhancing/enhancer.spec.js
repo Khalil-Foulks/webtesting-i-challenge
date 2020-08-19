@@ -1,2 +1,11 @@
 const enhancer = require('./enhancer.js');
 // test away!
+
+describe("enhancer", () => {
+    describe("repair", () => {
+        it("should set durabilty to 100", () => {
+            expect(enhancer.success({ item:"sword", durability: 77, enhancement: 0 })).toEqual({ item:"sword", durability: 100, enhancement: 0 })
+            expect(enhancer.success({ item:"sword", durability: 0, enhancement: 0 })).toEqual({ item:"sword", durability: 100, enhancement: 0 })
+        })
+    })
+})

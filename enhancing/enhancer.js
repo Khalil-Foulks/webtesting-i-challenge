@@ -6,7 +6,10 @@ module.exports = {
 };
 
 function success(item) {
-  return { ...item };
+  const restoredItem = {...item}
+  restoredItem.durability = 100;
+
+  return restoredItem;
 }
 
 function fail(item) {
