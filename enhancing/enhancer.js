@@ -6,8 +6,14 @@ module.exports = {
 };
 
 function success(item) {
-  const restoredItem = {...item}
-  
+  const enhancedItem = {...item}
+
+  if(enhancedItem.enhancement === 20){
+    return enhancedItem
+  }else {
+    enhancedItem.enhancement += 1 
+    return enhancedItem; 
+  }
 }
 
 function fail(item) {
